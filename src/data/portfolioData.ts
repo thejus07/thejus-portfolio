@@ -52,7 +52,7 @@ export const portfolioData = {
   about: {
     label: 'ABOUT ME',
     heading: "Hello, I'm Thejus.",
-    body: "I'm a Cloud AI Architect & Software Engineer specializing in building and optimizing web applications in cloud environments that balance scalability, security, and cost efficiency. Adept at Infrastructure as Code (Terraform), CI/CD pipeline automation, agentic AI workflows, and seamless cloud migrations."
+    body: "I build things, break things, learn things — then build them better. 🚀 I’m a multi-skilled engineer driven by curiosity and an endless hunger to learn, explore, and experiment. I enjoy diving into new technologies, figuring out how things work, picking up skills along the way, and turning random ideas into something real. I’m not someone who likes staying in one lane — if something sparks my curiosity, I’ll probably spend way too much time figuring it out. For me, technology is less about knowing everything and more about constantly discovering what’s possible."
   },
   toolbox: [
     {

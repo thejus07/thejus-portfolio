@@ -8,7 +8,6 @@ export const Hero: React.FC = () => (
     <motion.div initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }} className="hero-glass max-w-6xl w-full mx-auto rounded-[2rem] md:rounded-[2.75rem] px-7 py-12 md:p-16 lg:p-20">
       <div className="max-w-4xl">
 
-        <p className="eyebrow mb-8">{portfolioData.identity.heroEyebrow}</p>
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.9rem] font-semibold tracking-[-0.065em] leading-[0.98] text-white">I build thoughtful <span className="text-slate-400">cloud &amp; software</span> systems.</h1>
 
         <div className="mt-10 max-w-3xl"><p className="text-base md:text-lg leading-relaxed text-slate-300 max-w-xl">{portfolioData.identity.supportingText}</p></div>

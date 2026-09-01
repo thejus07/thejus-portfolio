@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../data/portfolioData';
+import FluidText from './originkit/ui/fluidtext';
 
 export const About: React.FC = () => {
   return (
@@ -16,38 +17,38 @@ export const About: React.FC = () => {
         <div className="absolute -top-24 -right-24 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
-          {/* Label */}
+          {/* Portrait */}
           <div className="lg:col-span-3">
-            <span className="text-xs font-mono tracking-widest text-blue-400 uppercase font-semibold bg-blue-500/10 px-3.5 py-1.5 rounded-full border border-blue-500/30 inline-block shadow-[0_0_15px_rgba(59,130,246,0.15)]">
-              {portfolioData.about.label}
-            </span>
+            <div className="relative overflow-hidden rounded-2xl border border-cyan-200/25 bg-slate-950/40 aspect-[4/5] min-h-[260px]">
+              <img
+                src="/profile/thejus.png"
+                alt="Thejus"
+                className="h-full w-full object-cover object-top"
+              />
+            </div>
           </div>
 
           {/* Editorial Text Block */}
           <div className="lg:col-span-9 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
-              {portfolioData.about.heading}
-            </h2>
-            <p className="text-xl md:text-2xl font-normal text-zinc-300 leading-relaxed max-w-3xl">
+            <div className="text-3xl md:text-5xl font-bold tracking-tight text-white leading-tight">
+              <span>Hello, I'm </span>
+              <span className="inline-flex align-middle w-[190px] h-[58px] md:w-[270px] md:h-[82px]">
+                <FluidText
+                  text="Thejus."
+                  color="#dbeafe"
+                  paletteColors={['#8b5cf6', '#22d3ee', '#3b82f6']}
+                  splatRadius={5}
+                  splatForce={7}
+                  curl={24}
+                  densityDissipation={8}
+                  font={{ fontFamily: 'Inter, sans-serif', fontWeight: 800, fontSize: '64px', textAlign: 'left', lineHeight: '1em' }}
+                />
+              </span>
+            </div>
+            <p className="text-lg md:text-xl font-normal text-zinc-300 leading-relaxed max-w-3xl">
               {portfolioData.about.body}
             </p>
 
-            {/* Key Pillars */}
-            <div className="pt-6 flex flex-wrap gap-3">
-              {[
-                { name: 'Cloud Infrastructure', color: 'bg-blue-500/10 text-blue-300 border-blue-500/30' },
-                { name: 'Software Engineering', color: 'bg-purple-500/10 text-purple-300 border-purple-500/30' },
-                { name: 'DevOps & Automation', color: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/30' },
-                { name: 'AI Systems', color: 'bg-cyan-500/10 text-cyan-300 border-cyan-500/30' },
-              ].map((pillar, idx) => (
-                <span
-                  key={idx}
-                  className={`px-4 py-2 rounded-full text-xs font-semibold border ${pillar.color} shadow-xs hover:scale-105 transition-transform`}
-                >
-                  {pillar.name}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </motion.div>
