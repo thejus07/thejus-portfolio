@@ -14,67 +14,67 @@ export interface Project {
 
 export const projectsData: Project[] = [
   {
-    id: 'ai-agent-benchmark',
-    name: 'AI AGENT BENCHMARK TASK',
-    category: 'AI Engineering & SRE Evaluation (Project Dynamo)',
-    description: 'A Terminal-Bench-style evaluation task for testing frontier AI agents on realistic SRE-class shell configuration bugs.',
-    fullDescription: 'Authored a Terminal-Bench-style evaluation task for Project Dynamo (Handshake AI), testing frontier AI agents on a realistic SRE-class shell configuration bug spanning /etc/profile.d layering, BASH_ENV sourcing rules, and systemd-style EnvironmentFile precedence, reproducible under non-interactive, non-login invocation context.',
-    technologies: ['Docker', 'Bash', 'Python', 'pytest', 'Linux Shell Internals', 'systemd', 'Harbor', 'Git/GitHub'],
+    id: 'cortex-ai-chatbot',
+    name: 'CORTEX AI CHATBOT',
+    category: 'AI Chat Experience',
+    description: 'An AI chatbot experience deployed as a fast, accessible web application.',
+    fullDescription: 'Cortex AI Chatbot is a deployed conversational AI interface focused on a polished, responsive chat experience.',
+    technologies: ['React', 'TypeScript', 'Vercel'],
     features: [
-      'Authored Terminal-Bench evaluation testing frontier AI agents on realistic SRE shell bugs',
-      'Built containerized Harbor task environment (Dockerfile & layered bug) with automated pass/fail verifiers',
-      'Designed anti-cheat verification: pristine-file hash restoration & dual-script execution checks',
-      'Validated end-to-end against oracle solution, no-op agent failures, and wholesale deletion shortcuts'
+      'Conversational AI interface',
+      'Responsive application experience',
+      'Production deployment on Vercel',
     ],
-    architecture: [
-      'Containerized Harbor environment evaluating non-interactive, non-login Linux shell contexts',
-      'Layered config bug evaluation across /etc/profile.d, BASH_ENV, and systemd EnvironmentFile precedence',
-      'Pristine-file hash verification engine with automated PR review validation'
-    ],
-    github: 'https://github.com/thejus07/shell-environment-precedence-debugging',
-    visualType: 'ai'
+    link: 'https://cortex-ai-chatbot.vercel.app',
+    github: 'https://github.com/thejus07/Cortex-AI-Chatbot',
+    visualType: 'ai',
   },
   {
-    id: 'pixelmind',
-    name: 'PIXELMIND',
-    category: 'Digital Product & Software Agency',
-    description: 'Self-employed software agency platform delivering bespoke web applications, cloud hosting, and custom digital products.',
-    fullDescription: 'Pixelmind (pixelmind.co.in) is a self-founded digital products and software agency specializing in building scalable React/Node.js web applications, high-converting digital interfaces, and tailored AWS cloud solutions for clients.',
-    technologies: ['React', 'TypeScript', 'Node.js', 'AWS', 'Tailwind CSS'],
+    id: 'assessment-pixelmind-recruiter-ai',
+    name: 'PIXELMIND RECRUITER AI',
+    category: 'AI Recruitment Assessment',
+    description: 'A recruiter-focused AI assessment project, available as source code.',
+    fullDescription: 'This recruiter AI assessment is presented as a source repository because it does not have a production deployment.',
+    technologies: ['TypeScript', 'AI', 'React'],
     features: [
-      'Bespoke web application architecture & design systems',
-      'Client cloud deployment & automated hosting pipelines',
-      'High-performance SEO & ultra-fast asset optimization',
-      'End-to-end full stack product development'
+      'AI-assisted recruitment workflow',
+      'Technical portfolio documentation',
+      'Source code available for review',
     ],
-    architecture: [
-      'React single-page application hosted on AWS CloudFront',
-      'Serverless Lambda API integrations with DynamoDB storage',
-      'Custom domain & SSL certificate management via Route 53'
-    ],
-    link: 'https://pixelmind.co.in',
-    github: 'https://github.com/thejus07/pixelmind',
-    visualType: 'dashboard'
+    link: 'https://assessment-pixelmind-recruiter-ai.vercel.app/',
+    github: 'https://github.com/thejus07/Assessment-Pixelmind-recruiter-ai',
+    visualType: 'dashboard',
   },
   {
-    id: 'cloud-pipeline',
-    name: 'CLOUD PIPELINE',
-    category: 'Cloud & DevOps',
-    description: 'Automated cloud infrastructure and CI/CD pipeline for deploying containerized applications.',
-    fullDescription: 'An enterprise-grade Infrastructure-as-Code repository and CI/CD system designed to provision high-availability AWS Kubernetes (EKS) clusters, handle automated blue-green deployments, and enforce zero-downtime releases.',
-    technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins'],
+    id: 'fit-flow-web',
+    name: 'FIT FLOW WEB',
+    category: 'Fitness Web Application',
+    description: 'A deployed fitness-focused web experience built for an approachable product flow.',
+    fullDescription: 'Fit Flow Web is a live web application with a product-focused fitness experience and an active Vercel deployment.',
+    technologies: ['React', 'TypeScript', 'Vercel'],
     features: [
-      'Declarative Infrastructure as Code using modular Terraform scripts',
-      'Automated multi-stage CI/CD pipeline built with Jenkins & GitHub Actions',
-      'Container orchestration using Kubernetes (EKS) with Auto-Scaling',
-      'Integrated Prometheus & Grafana telemetry and alerting rules'
+      'Fitness-focused product experience',
+      'Responsive web interface',
+      'Live Vercel deployment',
     ],
-    architecture: [
-      'Multi-AZ VPC architecture with public/private subnet isolation',
-      'AWS EKS cluster with managed node groups and ingress controllers',
-      'Automated Terraform state locking via AWS S3 and DynamoDB'
+    link: 'https://fit-flow-web-one.vercel.app',
+    github: 'https://github.com/thejus07/FitFlow',
+    visualType: 'mobile',
+  },
+  {
+    id: 'embark',
+    name: 'EMBARK',
+    category: 'Web Application',
+    description: 'A deployed web application built as an independent product experience.',
+    fullDescription: 'Embark is a live web application available through its Vercel deployment, with source code available for review.',
+    technologies: ['Web App', 'Vercel', 'GitHub'],
+    features: [
+      'Production web experience',
+      'Live application deployment',
+      'Live Vercel deployment',
     ],
-    github: 'https://github.com/thejus07/cloud-pipeline',
-    visualType: 'pipeline'
-  }
+    link: 'https://embark-nine.vercel.app',
+    github: 'https://github.com/thejus07/embark',
+    visualType: 'dashboard',
+  },
 ];

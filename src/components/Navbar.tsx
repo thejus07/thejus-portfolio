@@ -48,8 +48,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
       <div
         className={`max-w-5xl mx-auto rounded-full transition-all duration-500 px-6 py-2.5 flex items-center justify-between ${
           scrolled
-            ? 'bg-zinc-950/80 backdrop-blur-2xl border border-zinc-800/80 shadow-[0_8px_32px_rgba(0,0,0,0.5)]'
-            : 'bg-zinc-900/40 backdrop-blur-md border border-zinc-800/40 shadow-xs'
+            ? 'glass-nav-dark'
+            : 'bg-slate-950/35 backdrop-blur-xl border border-cyan-100/10 shadow-[inset_0_1px_0_rgba(255,255,255,.12)]'
         }`}
       >
         {/* Brand Logo */}
@@ -57,12 +57,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
           href="#"
           className="group flex items-center gap-2 text-xs font-bold tracking-widest text-white uppercase font-mono"
         >
-          <span className="w-2 h-2 rounded-full bg-blue-500 group-hover:scale-150 transition-transform duration-300" />
+          <span className="w-2 h-2 rounded-full bg-cyan-300 shadow-[0_0_14px_rgba(103,232,249,.9)] group-hover:scale-150 transition-transform duration-300" />
           <span>{portfolioData.identity.name}</span>
         </a>
 
         {/* Desktop Navigation Pills */}
-        <nav className="hidden md:flex items-center gap-1 bg-zinc-900/80 p-1 rounded-full border border-zinc-800/80 backdrop-blur-md">
+        <nav className="hidden md:flex items-center gap-1 bg-slate-950/35 p-1 rounded-full border border-white/10 backdrop-blur-md">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
                 {isActive && (
                   <motion.div
                     layoutId="activePillClean"
-                    className="absolute inset-0 bg-blue-600 rounded-full z-0"
+                    className="absolute inset-0 bg-gradient-to-r from-violet-500 to-cyan-500 rounded-full z-0 shadow-[0_0_14px_rgba(103,232,249,.25)]"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -92,9 +92,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
         <div className="hidden md:flex items-center">
           <button
             onClick={onOpenHireMe}
-            className="group text-xs font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-all duration-300 flex items-center gap-1.5 px-4 py-2 rounded-full shadow-[0_0_15px_rgba(37,99,235,0.4)] cursor-pointer"
+            className="group text-xs font-semibold text-slate-950 bg-gradient-to-r from-violet-300 to-cyan-300 hover:from-violet-200 hover:to-cyan-200 transition-all duration-300 flex items-center gap-1.5 px-4 py-2 rounded-full shadow-[inset_0_1px_0_rgba(255,255,255,.7),0_0_18px_rgba(103,232,249,.22)] cursor-pointer"
           >
-            <Sparkles className="w-3.5 h-3.5 text-blue-200" />
+            <Sparkles className="w-3.5 h-3.5 text-violet-700" />
             Hire me! <ArrowUpRight className="w-3 h-3" />
           </button>
         </div>

@@ -66,13 +66,10 @@ export const EngineeringLab: React.FC = () => {
       {/* Sticky Full-Viewport Horizontal Track Container */}
       <div className="sticky top-0 h-screen flex items-center overflow-hidden bg-[#08080A]">
         {/* Section Header Fixed Badge */}
-        <div className="absolute top-12 left-8 md:left-16 z-20 flex items-center gap-3">
+        <div className="absolute top-12 left-8 md:left-16 z-20">
           <span className="text-xs font-mono tracking-widest text-cyan-400 uppercase font-semibold bg-cyan-500/10 px-3.5 py-1.5 rounded-full border border-cyan-500/30 flex items-center gap-2 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
             <Terminal className="w-3.5 h-3.5 text-cyan-400" />
             ENGINEERING LAB
-          </span>
-          <span className="text-xs font-mono text-zinc-500 hidden sm:inline">
-            // Scroll down to traverse experiments horizontally →
           </span>
         </div>
 
