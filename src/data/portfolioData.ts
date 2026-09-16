@@ -113,7 +113,7 @@ export const portfolioData = {
       title: 'Founder & AI Assisted Engineer',
       company: 'Pixelmind Co.',
       companyUrl: 'https://pixelmind.co.in',
-      location: 'Bengaluru, India',
+      location: 'Remote',
       bullets: [
         'Founded and operated an AI services agency delivering GenAI-powered solutions including RAG pipelines, agentic assistants, and LLM-integrated applications.',
         'Designed and deployed AI-driven applications for clients, integrating GPT and Copilot into development workflows for faster coding, debugging, and optimization.',
@@ -138,7 +138,7 @@ export const portfolioData = {
       period: '2024 — 2025',
       title: 'Data Engineering Intern & Training Program',
       company: 'Unified Mentor',
-      location: 'Remote, India',
+      location: 'Remote',
       bullets: [
         'Completed an intensive Data Engineering training program and internship, building scalable ETL pipelines, database schemas, and automated data workflows.',
         'Developed hands-on data transformation models using Python, SQL, and cloud storage systems for analytics processing.'

@@ -1,21 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, ArrowUpRight, Check, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const Contact: React.FC = () => {
-  const [copied, setCopied] = useState(false);
-
-  const handleEmailClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    navigator.clipboard.writeText(portfolioData.identity.email);
-    setCopied(true);
-    setTimeout(() => {
-      setCopied(false);
-      window.location.href = `mailto:${portfolioData.identity.email}`;
-    }, 1200);
-  };
-
   return (
     <section id="contact" className="py-28 md:py-44 px-6 max-w-6xl mx-auto text-center z-10 relative">
       <motion.div
@@ -48,23 +36,6 @@ export const Contact: React.FC = () => {
 
         {/* Action Buttons */}
         <div className="pt-6 flex flex-wrap items-center justify-center gap-4 relative z-10">
-          <button
-            onClick={handleEmailClick}
-            className="px-8 py-4 rounded-full bg-slate-100 text-slate-900 font-semibold text-sm hover:bg-white transition-all duration-300 hover:scale-[1.02] active:scale-95 flex items-center gap-2"
-          >
-            {copied ? (
-              <>
-                <Check className="w-4 h-4 text-emerald-400" />
-                <span>Email Copied! Opening Mail...</span>
-              </>
-            ) : (
-              <>
-                <Mail className="w-4 h-4 text-slate-600" />
-                <span>Email Me</span>
-              </>
-            )}
-          </button>
-
           <a
             href={portfolioData.identity.linkedinUrl}
             target="_blank"

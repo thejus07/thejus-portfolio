@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import { AmbientBackground } from './components/AmbientBackground';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Projects } from './components/Projects';
-import { EngineeringLab } from './components/EngineeringLab';
 import { ProjectModal } from './components/ProjectModal';
 import { HireMeModal } from './components/HireMeModal';
 import { TechStack } from './components/TechStack';
@@ -19,6 +20,28 @@ export function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isHireMeOpen, setIsHireMeOpen] = useState(false);
 
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smoothWheel: true,
+    });
+
+    let animationFrameId: number;
+
+    function raf(time: number) {
+      lenis.raf(time);
+      animationFrameId = requestAnimationFrame(raf);
+    }
+
+    animationFrameId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#08080A] text-zinc-100 font-sans antialiased selection:bg-blue-600 selection:text-white relative">
       {/* Living System Interconnected Canvas & Mouse Spotlight */}
@@ -32,9 +55,6 @@ export function App() {
         <Hero />
         <About />
         <Projects onSelectProject={(project) => setSelectedProject(project)} />
-        
-        {/* Horizontal Scrolling Awwwards-style Section */}
-        <EngineeringLab />
 
         <TechStack />
         <Engineering />
