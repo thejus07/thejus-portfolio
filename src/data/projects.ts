@@ -10,6 +10,7 @@ export interface Project {
   link?: string;
   github?: string;
   visualType: 'dashboard' | 'mobile' | 'ai' | 'pipeline' | 'serverless';
+  imageUrl?: string;
 }
 
 export const projectsData: Project[] = [
@@ -28,6 +29,7 @@ export const projectsData: Project[] = [
     link: 'https://cortex-ai-chatbot.vercel.app',
     github: 'https://github.com/thejus07/Cortex-AI-Chatbot',
     visualType: 'ai',
+    imageUrl: '/project-images/cortex-ai-chatbot.png',
   },
   {
     id: 'assessment-pixelmind-recruiter-ai',
@@ -44,6 +46,7 @@ export const projectsData: Project[] = [
     link: 'https://assessment-pixelmind-recruiter-ai.vercel.app/',
     github: 'https://github.com/thejus07/Assessment-Pixelmind-recruiter-ai',
     visualType: 'dashboard',
+    imageUrl: '/project-images/pixelmind-recruiter-ai.png',
   },
   {
     id: 'fit-flow-web',
@@ -60,6 +63,7 @@ export const projectsData: Project[] = [
     link: 'https://fit-flow-web-one.vercel.app',
     github: 'https://github.com/thejus07/FitFlow',
     visualType: 'mobile',
+    imageUrl: '/project-images/fit-flow.png',
   },
   {
     id: 'embark',
@@ -76,5 +80,6 @@ export const projectsData: Project[] = [
     link: 'https://embark-nine.vercel.app',
     github: 'https://github.com/thejus07/embark',
     visualType: 'dashboard',
+    imageUrl: '/project-images/embark.png',
   },
 ];

@@ -70,7 +70,15 @@ export const PremiumProjectCard: React.FC<PremiumProjectCardProps> = ({
             }}
             className="w-full h-full relative"
           >
-            <ProjectVisuals type={project.visualType} title={project.name} />
+            {project.imageUrl ? (
+              <img
+                src={project.imageUrl}
+                alt={project.name}
+                className="w-full h-full object-cover object-top"
+              />
+            ) : (
+              <ProjectVisuals type={project.visualType} title={project.name} />
+            )}
           </motion.div>
         </div>
 

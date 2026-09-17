@@ -62,8 +62,16 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </button>
 
             {/* Visual Area */}
-            <div className="w-full h-64 md:h-80">
-              <ProjectVisuals type={project.visualType} title={project.name} />
+            <div className="w-full h-64 md:h-80 relative overflow-hidden bg-slate-950">
+              {project.imageUrl ? (
+                <img
+                  src={project.imageUrl}
+                  alt={project.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              ) : (
+                <ProjectVisuals type={project.visualType} title={project.name} />
+              )}
             </div>
 
             {/* Content Body */}

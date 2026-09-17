@@ -9,6 +9,8 @@ interface ProjectsProps {
 
 export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
   const getProjectImage = (project: Project) => {
+    if (project.imageUrl) return project.imageUrl;
+    if (project.id === 'cortex-ai-chatbot') return '/project-images/cortex-ai-chatbot.png';
     if (project.id === 'fit-flow-web') return '/project-images/fit-flow.png';
     if (project.id === 'assessment-pixelmind-recruiter-ai') return '/project-images/pixelmind-recruiter-ai.png';
     if (project.id === 'embark') return '/project-images/embark.png';
