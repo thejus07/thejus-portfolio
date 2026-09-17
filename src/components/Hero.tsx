@@ -28,8 +28,8 @@ export const Hero: React.FC = () => {
         className="hero-glass max-w-6xl w-full mx-auto rounded-[2.5rem] md:rounded-[3rem] relative overflow-hidden shadow-[0_30px_90px_rgba(0,0,0,0.6),0_0_80px_rgba(109,40,217,0.2)] border border-cyan-100/20"
       >
         {/* Living Ambient Glow Orbs inside Hero Card */}
-        <div className="absolute -top-32 -left-32 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 bg-white/25 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-600/30 rounded-full blur-3xl pointer-events-none" />
 
         {/* Hero Canvas Area */}
         <div className="relative h-[520px] sm:h-[580px] md:h-[640px] lg:h-[700px] w-full flex items-end justify-center overflow-hidden">
