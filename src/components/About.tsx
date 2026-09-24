@@ -50,7 +50,7 @@ export const About: React.FC = () => {
           >
             {/* Quote Bio Paragraph */}
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-slate-200 leading-relaxed font-sans tracking-wide">
-              &ldquo;Thejus M is a talented Freelance Designer &amp; Developer, known for his creative prowess and technical expertise. With a passion for crafting visually stunning and functional digital experiences, Thejus combines design aesthetics with coding finesse to bring his clients&rsquo; visions to life. Whether it&rsquo;s building websites, designing user interfaces, or optimizing user experiences, Thejus&rsquo;s dedication to excellence and innovation shines through in every project he undertakes.&rdquo;
+              &ldquo;Thejus M is a talented Designer &amp; Developer, known for his creative prowess and technical expertise. With a passion for crafting visually stunning and functional digital experiences, Thejus combines design aesthetics with coding finesse to bring his clients&rsquo; visions to life. Whether it&rsquo;s building websites, designing user interfaces, or optimizing user experiences, Thejus&rsquo;s dedication to excellence and innovation shines through in every project he undertakes.&rdquo;
             </p>
 
             {/* Currently Working Status Badge */}

@@ -67,8 +67,7 @@ export const Hero: React.FC = () => {
           <div className="absolute top-6 left-6 sm:top-10 sm:left-10 md:top-12 md:left-12 z-30 max-w-xs sm:max-w-sm text-left">
             <span className="eyebrow mb-2 block">Cloud &amp; Software Architect</span>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug">
-              Freelance<br />
-              <span className="text-slate-300">Designer &amp; Developer</span>
+              Designer &amp; Developer
             </h2>
             <div className="mt-5 flex flex-wrap gap-2.5">
               <a href="#work" className="button-primary text-xs py-2 px-4 shadow-lg">
