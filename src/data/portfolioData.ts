@@ -110,7 +110,7 @@ export const portfolioData = {
   experience: [
     {
       period: '2025 — Present',
-      title: 'Founder & AI Assisted Engineer',
+      title: 'AI Assisted Engineer',
       company: 'Pixelmind Co.',
       companyUrl: 'https://pixelmind.co.in',
       location: 'Remote',
