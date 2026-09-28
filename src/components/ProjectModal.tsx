@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ExternalLink, Github, CheckCircle2, Layers, Cpu } from 'lucide-react';
+import { X, ExternalLink, Github, CheckCircle2, Layers, Cpu, Globe, Bot } from 'lucide-react';
 import { Project } from '../data/projects';
 import { ProjectVisuals } from './ProjectVisuals';
 
@@ -78,8 +78,19 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <div className="p-6 md:p-8 space-y-6">
               {/* Header */}
               <div>
-                <div className="text-xs font-mono text-zinc-500 uppercase tracking-widest mb-1">
-                  {project.category}
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  {project.categoryType === 'ai' ? (
+                    <span className="inline-flex items-center gap-1 text-[11px] font-mono tracking-wider font-semibold text-purple-300 bg-purple-950/70 border border-purple-500/40 px-3 py-1 rounded-full">
+                      <Bot className="w-3.5 h-3.5 text-purple-400" /> AI MODEL
+                    </span>
+                  ) : (
+                    <span className="inline-flex items-center gap-1 text-[11px] font-mono tracking-wider font-semibold text-cyan-300 bg-cyan-950/70 border border-cyan-500/40 px-3 py-1 rounded-full">
+                      <Globe className="w-3.5 h-3.5 text-cyan-400" /> WEB APPLICATION
+                    </span>
+                  )}
+                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest">
+                    // {project.category}
+                  </span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-white">
                   {project.name}

@@ -20,11 +20,17 @@ export interface ExperienceItem {
 }
 
 export interface CertificationItem {
+  id: string;
   name: string;
+  subtitle?: string;
   issuer: string;
   year: string;
   badgeUrl?: string;
   credentialUrl?: string;
+  verificationUrl?: string;
+  validationNumber?: string;
+  issueDate?: string;
+  expirationDate?: string;
 }
 
 export interface EducationItem {
@@ -110,7 +116,7 @@ export const portfolioData = {
   experience: [
     {
       period: '2025 — Present',
-      title: 'AI Assisted Engineer',
+      title: 'AI Assisted Engineer - Freelance',
       company: 'Pixelmind Co.',
       companyUrl: 'https://pixelmind.co.in',
       location: 'Remote',
@@ -148,16 +154,27 @@ export const portfolioData = {
   ] as ExperienceItem[],
   certifications: [
     {
-      name: 'AWS Solutions Architect – Associate',
+      id: 'aws-csa',
+      name: 'AWS Certified Solutions Architect - Associate',
       issuer: 'Amazon Web Services',
       year: '2025',
-      credentialUrl: '#'
+      credentialUrl: '/AWS-Certified-Solutions-Architect-Associate.pdf',
+      verificationUrl: 'https://aws.amazon.com/verification',
+      validationNumber: 'b6e2f49eaf524742821d91c8a3f838d4',
+      issueDate: 'August 5, 2025',
+      expirationDate: 'August 5, 2028'
     },
     {
+      id: 'gcp-genai',
       name: 'Google Cloud Generative AI Academy',
+      subtitle: 'Build Real World AI Applications with Gemini and Imagen',
       issuer: 'Google Cloud',
       year: '2025',
-      credentialUrl: '#'
+      badgeUrl: '/google-cloud-gemini-badge.png',
+      credentialUrl: 'https://www.credly.com/badges/af10ec75-c0ce-4d79-9bef-db3811bf2ac0/public_url',
+      verificationUrl: 'https://www.credly.com/badges/af10ec75-c0ce-4d79-9bef-db3811bf2ac0/public_url',
+      validationNumber: 'af10ec75-c0ce-4d79-9bef-db3811bf2ac0',
+      issueDate: '2025'
     }
   ] as CertificationItem[],
   education: [
