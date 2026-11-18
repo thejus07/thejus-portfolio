@@ -9,9 +9,11 @@ import { Projects } from './components/Projects';
 import { CategoryProjectsPage } from './components/CategoryProjectsPage';
 import { ProjectModal } from './components/ProjectModal';
 import { HireMeModal } from './components/HireMeModal';
+import { ResumeModal } from './components/ResumeModal';
 import { TechStack } from './components/TechStack';
 import { Engineering } from './components/Engineering';
 import { Experience } from './components/Experience';
+import { ResumeSection } from './components/ResumeSection';
 import { Certifications } from './components/Certifications';
 import { GitHubSection } from './components/GitHubSection';
 import { Contact } from './components/Contact';
@@ -20,6 +22,7 @@ import { Project, ProjectCategoryType } from './data/projects';
 export function App() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isHireMeOpen, setIsHireMeOpen] = useState(false);
+  const [isResumeOpen, setIsResumeOpen] = useState(false);
   const [categoryPageView, setCategoryPageView] = useState<ProjectCategoryType | null>(null);
 
   useEffect(() => {
@@ -98,7 +101,10 @@ export function App() {
         /* Main Portfolio View */
         <>
           {/* Floating Dark Glass Taskbar */}
-          <Navbar onOpenHireMe={() => setIsHireMeOpen(true)} />
+          <Navbar
+            onOpenHireMe={() => setIsHireMeOpen(true)}
+            onOpenResume={() => setIsResumeOpen(true)}
+          />
 
           {/* Main Content Sections */}
           <main className="relative z-10">
@@ -112,6 +118,7 @@ export function App() {
             <TechStack />
             <Engineering />
             <Experience />
+            <ResumeSection onOpenResume={() => setIsResumeOpen(true)} />
             <Certifications />
             <GitHubSection />
             <Contact />
@@ -129,6 +136,12 @@ export function App() {
       <HireMeModal
         isOpen={isHireMeOpen}
         onClose={() => setIsHireMeOpen(false)}
+      />
+
+      {/* Resume Modal Popup */}
+      <ResumeModal
+        isOpen={isResumeOpen}
+        onClose={() => setIsResumeOpen(false)}
       />
     </div>
   );

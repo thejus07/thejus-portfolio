@@ -5,9 +5,10 @@ import { portfolioData } from '../data/portfolioData';
 
 interface NavbarProps {
   onOpenHireMe?: () => void;
+  onOpenResume?: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe, onOpenResume }) => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('work');
@@ -16,7 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ['work', 'about', 'experience', 'contact'];
+      const sections = ['work', 'about', 'experience', 'resume', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -40,6 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
     { name: 'Work', href: '#work', id: 'work' },
     { name: 'About', href: '#about', id: 'about' },
     { name: 'Experience', href: '#experience', id: 'experience' },
+    { name: 'Resume', href: '#resume', id: 'resume' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -65,11 +67,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
         <nav className="hidden md:flex items-center gap-1 bg-slate-950/35 p-1 rounded-full border border-white/10 backdrop-blur-md">
           {navLinks.map((link) => {
             const isActive = activeSection === link.id;
+            const isResume = link.id === 'resume';
+
             return (
               <a
                 key={link.name}
                 href={link.href}
-                className={`relative px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
+                onClick={(e) => {
+                  if (isResume) {
+                    e.preventDefault();
+                    if (onOpenResume) onOpenResume();
+                  }
+                }}
+                className={`relative px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300 cursor-pointer ${
                   isActive
                     ? 'text-white font-semibold'
                     : 'text-zinc-400 hover:text-white'
@@ -82,7 +92,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
-                <span className="relative z-10">{link.name}</span>
+                <span className="relative z-10 flex items-center gap-1.5">
+                  {link.name}
+                </span>
               </a>
             );
           })}
@@ -123,8 +135,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenHireMe }) => {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block text-base font-semibold text-zinc-200 hover:text-blue-400 py-1.5 border-b border-zinc-900"
+                onClick={(e) => {
+                  setMobileMenuOpen(false);
+                  if (link.id === 'resume') {
+                    e.preventDefault();
+                    if (onOpenResume) onOpenResume();
+                  }
+                }}
+                className="block text-base font-semibold text-zinc-200 hover:text-blue-400 py-1.5 border-b border-zinc-900 cursor-pointer"
               >
                 {link.name}
               </a>
